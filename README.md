@@ -34,6 +34,7 @@ Whenever a patient undergoes testing for a certain disease, he had to get his re
 - Jupyter Notebook
 - HTML, CSS and Javascript
 - Python libraries - Numpy, Pandas, Sklearn, Matplotlib, Seaborn, etc
+- Machine Learning algorithms - SVM, Random Forest, Xgboost, etc
 - Deep Learning - CNN, ResNet50, VGG19
 - Heroku Cloud for deployment
 
