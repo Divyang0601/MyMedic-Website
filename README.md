@@ -21,7 +21,7 @@ Whenever a patient undergoes testing for a certain disease, he had to get his re
 - Help people avoid paying huge amount to doctors for consultation and diagnosis
 - Extend the role of technology in healthcare
 
-## To contribute on this project - Clone the repository, download it, and run the following command on your terminal
+## To run this project on local machine - Clone the repository, download it, and run the following command on your terminal
 
 - cd "Directory of main folder"
 - python app.py
