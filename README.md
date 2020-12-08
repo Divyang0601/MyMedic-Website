@@ -3,6 +3,10 @@
 The website is deployed on the heroku cloud
 Link : https://mymedic.herokuapp.com/
 
+A glimpse of the website
+
+![](mymedic.gif)
+
 ## About
 This website facilitates 8 end-to-end Machine Learning and Deep Learning model built upon Healthcare datasets
 that can be used to predict whether a person is suffering from a particular disease or not
