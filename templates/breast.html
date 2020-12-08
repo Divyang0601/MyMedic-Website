@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}"/>
+  <title> Breast Cancer Test </title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/dstyles.css">
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/0278cee5ca.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div class="navigation">
+    <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+
+    <label for="navi-toggle" class="navigation-button">
+      <span class="navigation-icon"> &nbsp; </span>
+    </label>
+
+    <!-- nbsp is used to give a white space in div -->
+    <div class="navigation-background"> &nbsp; </div>
+
+    <nav class="navigation-nav">
+      <ul class="navigation-list">
+        <li class="navigation-item"><a href="{{url_for('cancer_view')}}#upload_data" class="navigation-link"> <span> 01 </span> TEST YOURSELF </a></li>
+        <li class="navigation-item"><a href="{{url_for('home_view')}}" class="navigation-link"> <span> 02 </span> HOME PAGE </a></li>
+        <li class="navigation-item"><a href="{{url_for('home_view')}}#contact" class="navigation-link"> <span> 03 </span> FEEDBACK </a></li>
+        <li class="navigation-item"><a href="{{url_for('home_view')}}#about" class="navigation-link"> <span> 04 </span> CONTACT US </a></li>
+
+
+      </ul>
+    </nav>
+  </div>
+
+
+  <!-- Header -->
+
+  <section class="header">
+
+    <h1 class='mainhead'> Breast Cancer </h1>
+    <h5 class='deschead'> Description </h5>
+    <p class='descrip'> A malignant tumor that has developed from cells in the breast. Usually breast cancer either begins in the cells of the lobules, which are the milk-producing glands, or the ducts, the passages that drain milk from the lobules
+      to the nipple. Less commonly, breast cancer can begin in the stromal tissues, which include the fatty and fibrous connective tissues of the breast </p>
+
+  </section>
+
+  <section class="section-about">
+
+    <div class="symp">
+
+
+
+      <!-- Utility Class to center text and give margin bottom to h2 -->
+      <div class="u-center-text u-margin-bottom-big">
+
+        <h2 class="heading-secondary">
+          Symptoms
+        </h2>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-1-of-2">
+          <p class="paragraph">
+            <div class="column3"> Swelling in the breast </div>
+            <div class="column3"> Dimpling : change to the skin </div>
+            <div class="column3"> Change in the colour of the breast </div>
+            <div class="column3"> Change to the nipple </div>
+            <div class="column3"> Crusting around the nipple </div>
+            <div class="column3"> Unusual liquid discharge from nipple </div>
+          </p>
+
+        </div>
+
+        <div class="col-1-of-2">
+          <div class="composition">
+
+            <!-- 1em = 16px -->
+            <img src="../static/images/breast_sym.jpg" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo1" class="composition_photo composition_photo--p1">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="prec">
+
+      <!-- Utility Class to center text and give margin bottom to h2 -->
+      <div class="u-center-text u-margin-bottom-big">
+
+        <h2 class="heading-secondary">
+          Precautions
+        </h2>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-1-of-2">
+          <p class="paragraph">
+            <div class="column3"> Control your weight </div>
+            <div class="column3"> Be physically active </div>
+            <div class="column3"> Don't smoke </div>
+            <div class="column3"> Limit Alcohol </div>
+            <div class="column3"> Breast-feed </div>
+            <div class="column3"> Avoid exposure to radiation </div>
+            <div class="column3"> Limit the dose of hormone therapy </div>
+            <div class="column3"> Avoid exposure to Environmental Pollution </div>
+          </p>
+
+        </div>
+
+        <div class="col-1-of-2">
+          <div class="composition">
+
+            <!-- 1em = 16px -->
+            <img src="../static/images/breast_prec.jpg" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo1" class="composition_photo composition_photo--p1">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Prediction and Tests and Results -->
+
+  <div class="prediction">
+    <h1 class='preddhead'> Tests </h1>
+    <form class="" action="{{url_for('cancer_result')}}" method="POST" id="upload_data">
+      <div class="row">
+
+
+
+        <div class="column">
+          <div class="card">
+            <label for=""> mean radius </label>
+            <input type="text" name="mean_radius" value="" placeholder="mean radius" >
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean texture </label>
+            <input type="text" name="mean_texture" value="" placeholder="mean texture">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean perimeter </label>
+            <input type="text" name="mean_perimeter" value="" placeholder="mean perimeter">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean area </label>
+            <input type="text" name="mean_area" value="" placeholder="mean area">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean compactness </label>
+            <input type="text" name="mean_compactness" value="" placeholder="mean compactness">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean smoothness </label>
+            <input type="text" name="mean_smoothness" value="" placeholder="mean smoothness">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean concavity </label>
+            <input type="text" name="mean_concativity" value="" placeholder="mean concavity">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean concave points </label>
+            <input type="text" name="mean_concave_points" value="" placeholder="mean concave points">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean symmetry </label>
+            <input type="text" name="mean_symmetry" value="" placeholder="mean symmetry">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> mean fractal dimension</label>
+            <input type="text" name="mean_fractal_dimension" value="" placeholder="mean fractal dimension">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> radius error </label>
+            <input type="text" name="radius_error" value="" placeholder="radius error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> texture error </label>
+            <input type="text" name="texture_error" value="" placeholder="texture error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> perimeter error </label>
+            <input type="text" name="perimeter_error" value="" placeholder="perimeter error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> area error </label>
+            <input type="text" name="area_error" value="" placeholder="area error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> compactness error </label>
+            <input type="text" name="compactness_error" value="" placeholder="compactness error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> smoothness error </label>
+            <input type="text" name="smoothness_error" value="" placeholder="smoothness error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> concavity error </label>
+            <input type="text" name="concavity_error" value="" placeholder="concavity error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> concave points error </label>
+            <input type="text" name="concave_points_error" value="" placeholder="concave points error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> symmetry error </label>
+            <input type="text" name="symmetry_error" value="" placeholder="symmetry error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> fractal dimension error </label>
+            <input type="text" name="fractal_dimension_error" value="" placeholder="fractal dimension error">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst radius </label>
+            <input type="text" name="worst_radius" value="" placeholder="worst radius">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst texture </label>
+            <input type="text" name="worst_texture" value="" placeholder="worst texture">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst perimeter </label>
+            <input type="text" name="worst_perimeter" value="" placeholder="worst perimeter">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst area </label>
+            <input type="text" name="worst_area" value="" placeholder="worst area">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst compactness </label>
+            <input type="text" name="worst_compactness" value="" placeholder="worst compactness">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst smoothness </label>
+            <input type="text" name="worst_smoothness" value="" placeholder="worst smoothness">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst concavity </label>
+            <input type="text" name="worst_concavity" value="" placeholder="worst concavity">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst concave points </label>
+            <input type="text" name="worst_concave_points" value="" placeholder="worst concave points">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst symmetry </label>
+            <input type="text" name="worst_symmetry" value="" placeholder="worst symmetry">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <label for=""> worst fractal dimension </label>
+            <input type="text" name="worst_fractal_dimension" value="" placeholder="worst fractal dimension">
+          </div>
+        </div>
+
+      </div>
+      <button class="formBut btn btn-outline-dark btn-lg" type="submit" name="button"> PREDICT </button>
+      <button class="formBut btn btn-outline-danger btn-lg" type="reset" name="button"> RESET </button>
+    </form>
+
+    <button class="btn btn-outline-primary btn-lg goto" type="submit" name="button"> <a class="home1" href = "{{url_for('home_view')}}"> GOTO HOME PAGE</a> </button>
+  </div>
+
+
+  <!-- footer -->
+
+  <div id='about' class="footer">
+    <div class="row">
+      <div class="abt may col-lg-6">
+        <h4 class='footName'> Mayank Agarwal </h4>
+        <a class="con linked" href="#"> <i class="fab fa-linkedin fa-2x"></i> </a>
+        <a class="con github" href="#"> <i class="fab fa-github-square fa-2x"></i> </a>
+        <a class="con mailing" href="#"> <i class="fas fa-envelope fa-2x"></i> </a>
+      </div>
+      <div class="abt divy col-lg-6">
+        <h4 class='footName'> Divyang Mishra </h4>
+        <a class="con linked" href="#"> <i class="fab fa-linkedin fa-2x"></i> </a>
+        <a class="con github" href="#"> <i class="fab fa-github-square fa-2x"></i> </a>
+        <a class="con mailing" href="#"> <i class="fas fa-envelope fa-2x"></i> </a>
+      </div>
+
+    </div>
+    <p class='copyrit'> @Copyright 2020</p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js" type="text/javascript">
+
+  </script>
+</body>
+
+
+</html>

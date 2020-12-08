@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Ubuntu:wght@500&display=swap');
+
+body {
+  text-align: center;
+  font-family: 'Ubuntu';
+}
+
+hr {
+  border: dotted;
+  border-bottom: 0;
+  color: #c7b198;
+  margin: 50px auto;
+  width: 10%;
+}
+
+/* Navigation */
+.navigation-checkbox {
+  display: none;
+}
+
+.navigation-button {
+  background-color: #fff;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .navigation-button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .navigation-button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
+
+.navigation-background {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#3282b8, #bbe1fa);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .navigation-background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .navigation-background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
+}
+
+.navigation-nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navigation-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.navigation-item {
+  margin: 1rem;
+}
+
+.navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 230%;
+  transition: all 0.4s;
+}
+
+.navigation-link:link span, .navigation-link:visited span {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  color: #394989;
+  transform: translateX(1rem);
+}
+
+.navigation-checkbox:checked~.navigation-background {
+  transform: scale(80);
+}
+
+.navigation-checkbox:checked~.navigation-nav {
+  opacity: 1;
+  width: 100%;
+}
+
+.navigation-icon {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.navigation-icon, .navigation-icon::before, .navigation-icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+}
+
+.navigation-icon::after, .navigation-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.navigation-icon::before {
+  top: -0.8rem;
+}
+
+.navigation-icon::after {
+  top: 0.8rem;
+}
+
+.navigation-button:hover .navigation-icon::before {
+  top: -1rem;
+}
+
+.navigation-button:hover .navigation-icon::after {
+  top: 1rem;
+}
+
+.navigation-checkbox:checked+.navigation-button .navigation-icon {
+  background-color: transparent;
+}
+
+.navigation-checkbox:checked+.navigation-button .navigation-icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.navigation-checkbox:checked+.navigation-button .navigation-icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+/* Table Settings for Precautions and Symptoms */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* header */
+.header {
+  background-color: #eeeeee;
+  font-family: 'Montserrat';
+  padding: 3%;
+}
+
+.mainhead {
+  font-size: 6rem;
+  color: #e8505b;
+  padding-bottom: 30px;
+}
+
+.deschead {
+  font-size: 3rem;
+  padding: 20px;
+  color: #b83b5e;
+}
+
+.descrip {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #393e46;
+}
+
+/* Symptoms */
+.section-about {
+  margin: 2.5rem 0;
+}
+
+.section-about h2 {
+  margin: 50px 0 40px;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Baloo Bhai 2', cursive;
+  display: inline-block;
+  background-image: linear-gradient(to right, #66bfbf, #056674);
+  -webkit-background-clip: text;
+  color: transparent;
+  /* to give the text animation when we hover on it */
+  transition: all .2s;
+}
+
+.section-about h2:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.section-about .column3 {
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  display: inline-block;
+  background-image: linear-gradient(to right, #e94560, #cd0a0a);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 2.2;
+}
+
+.composition img {
+  width: 58%;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  margin-top: 2rem;
+}
+
+.prec {
+  margin: 80px 0;
+  background-color: #f5f5f5;
+}
+
+.row {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0px 0 95px;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 7.5rem)/2);
+  margin-top: 25px;
+}
+
+/* #TESTS */
+.prediction {
+  padding-top: 7px;
+  margin: 7% 0;
+}
+
+.preddhead {
+  margin: 4% 0;
+}
+
+.testClick {
+  width: 45%;
+  left: 250px;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+  margin: 20px 0;
+}
+
+.row {
+  margin: 0 -5px;
+  padding-bottom: 75px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.goto {
+  margin: 50px;
+  width: 50%;
+}
+
+.formBut {
+  margin: 10px;
+}
+
+.imgUp label{
+  display: block;
+  margin: 2px 555px 36px;
+  font-size: 1.5rem;
+  color: #68b0ab;
+}
+
+.imgUp input{
+  display: block;
+  margin: 0 580px;
+}
+
+/* footer */
+.footer {
+  margin-top: 50px;
+  background-color: #f1f3f4;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.footName {
+  color: black;
+}
+
+.abt {
+  padding: 30px 0 30px 0;
+}
+
+.con {
+  color: #8ec6c5;
+  margin: 0 20px;
+}
+
+.may {
+  padding-left: 15%;
+}
+
+.divy {
+  right: 150px;
+}
+
+.github:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.linked:hover {
+  color: #3282b8;
+  text-decoration: none;
+}
+
+.mailing:hover {
+  text-decoration: none;
+  color: #e7305b;
+}
+
+.copyrit {
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 2;
+}
+
+/* TESTING */

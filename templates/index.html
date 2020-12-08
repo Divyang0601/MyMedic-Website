@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}"/>
+  <title>MyMedic - Your Health Companion</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/styles.css">
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/0278cee5ca.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+
+  <section class='top'>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark nav-bg">
+
+      <a class="navbar-brand" href="{{url_for('home_view')}}"><i class="fas fa-hand-holding-medical"></i> MyMedic</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#detect">Predict</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Review</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Contact us</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </nav>
+
+    <!-- Header -->
+
+    <div class="header container-fluid">
+
+      <h1> THE HEART OF YOUR HEALTHCARE </h1>
+
+
+    </div>
+
+  </section>
+
+  <!-- Middle -->
+
+  <div class="middle">
+
+  </div>
+
+  <!-- Select Disease to ve detected -->
+
+  <div id="detect" class="dtct">
+
+    <div class="row">
+      <div class="col-1-of-3">
+        <div class="card">
+          <div class="box">
+            <h4><b> Breast Cancer </b></h4>
+            <p class='descdis'>a malignant tumor in the breast</p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"> <a class="detectLink" href="{{url_for('cancer_view')}}"> Detect </a> </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-of-3">
+        <div class="card">
+          <div class="box">
+            <h4><b> Liver Cancer </b></h4>
+            <p> Cancer in the cells of liver </p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"> <a class="detectLink" href="{{url_for('liver_view')}}"> Detect </a> </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-of-3">
+        <div class="card">
+          <div class="box">
+            <h4><b> Diabetes </b></h4>
+            <p> A Metabolic Disease that causes High Blood Sugar </p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"> <a class="detectLink" href="{{url_for('diabetes_view')}}"> Detect </a> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-3">
+        <div class="card">
+          <div class="box">
+            <h4><b> Heart Disease </b></h4>
+            <p> Describes a range of conditions that affect your heart </p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"> <a class="detectLink" href="{{url_for('heart_view')}}"> Detect </a> </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-of-3">
+        <div class="card">
+          <div class="box">
+            <h4><b> Kidney Disease </b></h4>
+            <p>The Gradual loss of Kidney function</p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"> <a class="detectLink" href="{{url_for('kidney_view')}}"> Detect </a> </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-of-3">
+        <div class="card">
+          <div class="box">
+            <h4><b>Malaria</b></h4>
+            <p> A disease caused by a parasite, transmitted to humans through the bites of infected mosquitoes</p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"><a class="detectLink1" href = "{{url_for('malaria_view')}}"> Detect</a> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="card">
+          <div class="box">
+            <h4><b>Pnemonia</b></h4>
+            <p>Lung inflammation caused by bacterial or viral infection</p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"><a class="detectLink2" href = "{{url_for('pnemonia_view')}}"> Detect</a> </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <div class="card">
+          <div class="box">
+            <h4><b>Brain Tumor</b></h4>
+            <p>A cancerous or non-cancerous mass or growth of abnormal cells in the brain</p>
+            <button class="btn btn-outline-dark btn-md" type="submit" name="button"><a class = "detectLink3" href = "{{url_for('brain_view')}}"> Detect </a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Contact Us -->
+
+  <div id='contact' class="">
+    <div class="feedback">
+      <h2 class='feedhead'> Feedback Form </h2>
+      <h5 class='feedhead'> Provide us with your valuable feedback </h5>
+
+      <form action="{{url_for('thank_you')}}">
+        <label for="name"> Name: </label>
+        <input id='name' type="text" name="Name" value="" placeholder="Your Name">
+
+        <label for="phone"> Contact Number: </label>
+        <input id='phone' type="text" name="Number" value="" placeholder="Mobile No.">
+
+        <label for="mail"> Email Address: </label>
+        <input id='mail' type="email" name="Email" value="" placeholder="Email ID">
+
+        <textarea name="" rows="8" cols="155" placeholder="Your Query/feedback..."></textarea>
+
+        <a href="{{url_for('thank_you')}}" class="button sub" role="button" type = "Submit">SUBMIT</a>
+        <a href="#contact" class="button res" role="button" type = "reset">RESET</a>
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- footer -->
+
+  <div id='about' class="footer">
+    <div class="row">
+      <div class="abt may col-lg-6">
+        <h4 class='footName'> Mayank Agarwal </h4>
+        <a class="con linked" href="https://www.linkedin.com/in/mayank-agarwal-81b690196/"> <i class="fab fa-linkedin fa-2x"></i> </a>
+        <a class="con github" href="https://github.com/mayankag30"> <i class="fab fa-github-square fa-2x"></i> </a>
+        <a class="con mailing" href="https://mail.google.com/mail/u/2/#inbox?compose=CllgCHrdlBPRsKlMVNqvWQhbnsfgbmZdtsHsPvCFmRZkRspKwQnFwGcTfkLCkWtCnPLLDvRxRwg"> <i class="fas fa-envelope fa-2x"></i> </a>
+      </div>
+      <div class="abt divy col-lg-6">
+        <h4 class='footName'> Divyang Mishra </h4>
+        <a class="con linked" href="https://www.linkedin.com/in/divyang-mishra-67a7651a0/"> <i class="fab fa-linkedin fa-2x"></i> </a>
+        <a class="con github" href="https://github.com/Divyang0601"> <i class="fab fa-github-square fa-2x"></i></a>
+        <a class="con mailing" href="https://mail.google.com/mail/u/2/#inbox?compose=CllgCJNvNQkVFRvCQRlWGTtspGpWfpjQvLlcGLckHCpsQsZNxjNvlSvndrFGRsXjMLRXlGnHrXq"> <i class="fas fa-envelope fa-2x"></i> </a>
+      </div>
+
+    </div>
+    <p class='copyrit'>    @Copyright 2020</p>
+  </div>
+</body>
+
+</html>

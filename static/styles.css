@@ -1,0 +1,222 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+  position: absolute;
+  top: 150px;
+  left: 345px;
+}
+
+h4 {
+  margin-bottom: 25px;
+}
+
+/* Navigation bar */
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'Montserrat-light';
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+/* top section */
+.header {
+  position: relative;
+  margin-top: 0;
+  padding: 300px 0;
+  background-image: url("images/head2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* detect diseases */
+.row {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0px 0 95px;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 7.5rem)/2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem)/3);
+}
+
+.dtct {
+  background-color: #f1f3f4;
+  padding: 10px 10px;
+  margin-top: 100px;
+  margin-bottom: 90px;
+}
+
+.detectLink {
+  color: black;
+}
+
+.btn{
+  width: 50%;
+}
+
+.btn:hover .detectLink {
+  color: white;
+  text-decoration: none;
+}
+
+.descdis {
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+.card {
+  margin: 50px 100px;
+  padding: 24px 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 70%;
+  height: 70%;
+  transform: scale(1);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(1.2rem) scale(1.1);
+}
+
+.box {
+  padding: 0px 0px;
+  position: relative;
+}
+
+/* Contact page */
+.feedback {
+  font-family: 'Montserrat';
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: left;
+  margin: 100px auto;
+  width: 80%;
+  position: relative;
+}
+
+.feedhead {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+textarea {
+  resize: vertical;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.button {
+  border-radius: 5px;
+  color: white;
+  padding: 0.5em;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  margin: 18px 122px 0 267px;
+  width: 10%;
+  transition: all 0.3s;
+}
+
+.sub{
+  background-color: #1a1c20;
+}
+
+.sub:hover{
+  background-color: #393b44;
+  color: white;
+}
+
+.res{
+  background-color: #ec0101;
+}
+
+.res:hover{
+
+  background-color: #cd0a0a;
+  color: white;
+}
+
+.button:focus,
+.button:hover {
+  text-decoration: none;
+  transform: scale(1.05) translateY(-2px);
+}
+
+
+/* footer */
+.footer {
+  margin-top: 50px;
+  background-color: #f1f3f4;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.footName {
+  color: black;
+}
+
+.abt {
+  padding: 30px 0 30px 0;
+}
+
+.con {
+  color: #8ec6c5;
+  margin: 0 20px;
+}
+
+.may {
+  padding-left: 15%;
+}
+
+.divy {
+  right: 150px;
+}
+
+.github:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.linked:hover {
+  color: #3282b8;
+  text-decoration: none;
+}
+
+.mailing:hover {
+  text-decoration: none;
+  color: #e7305b;
+}
+
+.copyrit {
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 2;
+}
